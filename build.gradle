@@ -15,6 +15,9 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.ldap:spring-ldap-core' // Essential
+	implementation 'org.springframework.security:spring-security-ldap' // Spring Security for integrating with LDAP. https://mvnrepository.com/artifact/org.springframework.security/spring-security-ldap/5.3.0.RELEASE
+	implementation 'com.unboundid:unboundid-ldapsdk' // An open source LDAP embedded server for Spring Boot. https://mvnrepository.com/artifact/com.unboundid/unboundid-ldapsdk/5.0.1
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
